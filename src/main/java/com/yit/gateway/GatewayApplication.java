@@ -18,15 +18,25 @@ public class GatewayApplication {
 		
 		return builder.routes()
 			      .route(r ->r
-			        .path("/getProduct")
-			        .uri("http://catalog-git:8080")
-			        .id("Product"))
+			    		  .path("/getProduct")
+			    		  .uri("http://catalog-git:8082")
+			    		  .id("Product"))
 			      .route(r -> r
-			        .path("/getCart")
-			        .filters(f -> f.prefixPath("/api"))
-			        .uri("http://cart-git:8080")
-			        .id("Cart"))
+			    		  .path("/getCart")
+			    		  .filters(f -> f.prefixPath("/api"))
+			    		  .uri("http://cart-git:8081")
+			    		  .id("Cart"))
+			      .route(r -> r
+			    		  .path("/addToCart")
+			    		  .filters(f -> f.prefixPath("/api"))
+			    		  .uri("http://cart-git:8081")
+			    		  .id("Cart"))
+			      .route(r -> r
+			    		  .path("/deleteItem")
+			    		  .filters(f -> f.prefixPath("/api"))
+			    		  .uri("http://cart-git:8081")
+			    		  .id("Cart"))
 			    .build();
-		
+	
     }
 }
