@@ -22,8 +22,8 @@ public class GatewayController {
     public Object restTest() throws UnknownHostException {
 
 		Map<String, Object> map = new HashMap<>();
-	    map.put("port", envUtil.getPort());
-	    map.put("host", envUtil.getHostname());
+	    map.put("port2", envUtil.getPort());
+	    map.put("host2", envUtil.getHostname());
 	    return map;
     }
 	
