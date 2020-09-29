@@ -9,7 +9,7 @@ spec:
   externalTrafficPolicy: Cluster
   ports:
   - port: 8080
-    name: "gatewayport"
+    name: "web"
     protocol: TCP
     targetPort: 8080
   selector:
