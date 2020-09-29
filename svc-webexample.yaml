@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: gateway
     hpecp.hpe.com/hpecp-internal-gateway: "true"
   name: gateway-service
 spec:
