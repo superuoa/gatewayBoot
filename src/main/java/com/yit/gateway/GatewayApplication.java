@@ -19,7 +19,8 @@ public class GatewayApplication {
 		return builder.routes()
 			      .route(r ->r
 			    		  .path("/getProduct")
-			    		  .uri("http://catalog:8080")
+			    		  //.uri("http://catalog:8080")
+			    		  .uri("http://catalog-service.ball-prod:8080")
 			    		  .id("Product"))
 			      .route(r -> r
 			    		  .path("/getCart")
