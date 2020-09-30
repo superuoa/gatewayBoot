@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: {{TimeStamp}}
+  creationTimestamp: "{{TimeStamp}}"
   name: gateway-deployment
   labels:
     app: gateway
