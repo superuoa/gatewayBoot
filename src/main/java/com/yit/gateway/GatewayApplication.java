@@ -17,25 +17,28 @@ public class GatewayApplication {
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
 		
 		return builder.routes()
-			      .route(r ->r
+			      .route(r -> r
 			    		  .path("/getProduct")
-			    		  //.uri("http://catalog:8080")
-			    		  .uri("http://catalog-service.ball-prod:8080")
+			    		  .uri("http://catalog:8080")
+			    		  //.uri("http://catalog-service.ball-prod:8080")
 			    		  .id("Product"))
 			      .route(r -> r
 			    		  .path("/getCart")
 			    		  .filters(f -> f.prefixPath("/api"))
-			    		  .uri("http://cart-service.ball-prod:8080")
+			    		  .uri("http://cart:8080")
+			    		  //.uri("http://cart-service.ball-prod:8080")
 			    		  .id("Cart"))
 			      .route(r -> r
 			    		  .path("/addToCart")
 			    		  .filters(f -> f.prefixPath("/api"))
-			    		  .uri("http://cart-service.ball-prod:8080")
+			    		  .uri("http://cart:8080")
+			    		  //.uri("http://cart-service.ball-prod:8080")
 			    		  .id("Cart"))
 			      .route(r -> r
 			    		  .path("/deleteItem")
 			    		  .filters(f -> f.prefixPath("/api"))
-			    		  .uri("http://cart-service.ball-prod:8080")
+			    		  .uri("http://cart:8080")
+			    		  //.uri("http://cart-service.ball-prod:8080")
 			    		  .id("Cart"))
 			    .build();
 	
